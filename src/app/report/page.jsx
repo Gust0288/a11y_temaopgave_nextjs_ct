@@ -1,8 +1,5 @@
-"use client";
 import React from "react";
-//import Image from "next/image";
 import data from "../../../public/examples/kea_dk";
-// import data from "../../assets/examples/kea_dk.json";
 import Image from "next/image";
 import ReportExpand from "../components/ReportExpand";
 import "../globals.css";
