@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 //import Image from "next/image";
 import data from "../../assets/examples/kea_dk.json";
@@ -27,7 +27,7 @@ export default function Page() {
       <p>{data.passes.length} checks cleared succesfully</p>
       <p>Found {data.violations.length} issues</p>
       {data.violations.map((violation) => (
-        <ReportExpand key={violation.id} {...violation}/>
+        <ReportExpand key={violation.id} {...violation} />
       ))}
       {/* <div>
         <h1>Issues</h1>
@@ -36,17 +36,14 @@ export default function Page() {
         ))}
       </div> */}
 
-
-      {/* <Image 
+      {/* <Image
         // src="./public/exampleImages/kea.webp"
-        //src={data.screenshot.url} //til rapport hentet med API
+        src={data.screenshot.url} //til rapport hentet med API
         alt="screenshot of searched site"
         width={data.screenshot.width}
         height={data.screenshot.height}
         className="border-2 border-slate-800"
       /> */}
-
-
     </main>
   );
 }
