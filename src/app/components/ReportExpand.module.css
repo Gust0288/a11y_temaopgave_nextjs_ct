@@ -1,0 +1,14 @@
+.closed {
+  height: 0;
+  overflow: clip;
+  /* .bi-arrow-right-circle {
+    transform: rotate(90deg);
+  } */
+}
+article:has(.open, .closed) svg {
+  transition: all 0.2s ease-out;
+}
+
+article:has(.open) svg {
+  rotate: 90deg;
+}
