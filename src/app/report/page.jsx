@@ -39,8 +39,8 @@ export default function Page() {
           className="border-2 border-slate-800  w-full md:w-1/2 xl:w-[600px]"
         />
       </div>
-      <p>{data.passes.length} checks cleared succesfully</p>
-      <p>Found {data.violations.length} issues</p>
+      <h2>{data.passes.length} checks cleared succesfully</h2>
+      <h2>Found {data.violations.length} issues</h2>
       {data.violations.map((violation) => (
         <ReportExpand key={violation.id} {...violation} />
       ))}

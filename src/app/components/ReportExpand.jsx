@@ -16,7 +16,7 @@ function ReportExpand(props) {
   return (
     <article className="border-2 border-slate-500 rounded-md my-3 p-2 sm:max-w-2xl">
       <button onClick={handeChange} className="flex flex-row w-full gap-2">
-        <h2 className="inline mr-2 my-auto">{props.id}</h2>
+        <h3 className="inline mr-2 my-auto">{props.id}</h3>
         <h4 className="inline mr-2 my-auto">Impact: {props.impact}</h4>
         <svg
           xmlns="http://www.w3.org/2000/svg"
