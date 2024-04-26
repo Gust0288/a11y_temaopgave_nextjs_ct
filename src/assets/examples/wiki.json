@@ -5,7 +5,8 @@
     "impact": "moderate",
     "description": "Headings must be in a valid logical order, meaning h1 through h6 element tags must appear in a sequentially-descending order. ",
     "whyItMatters": "The underlying purpose of headers is to convey the structure of the page. For sighted users, the same purpose is achieved using different sizes of text. Text size, however, is not helpful for users of screen readers, because a screen reader identifies a header only if it is properly marked-up. When heading elements are applied correctly, the page becomes much easier to navigate for screen reader users and sighted users alike. In the same way that sighted users can glance at a page and get a sense of its contents, users of screen readers can do the same by navigating through headings. Well written and properly ordered headings can save users, especially those who use screen readers, a lot of time and frustration. The purpose of headings is to describe the structure of the webpage, not just highlight important text. They should be brief, clear, unique, and marked with h1 through h6 elements applied in hierarchical order. All of these qualities make headings valuable tools for screen reader users. Similar to the way sighted users can glance at a page and get a sense of its contents, screen reader users can navigate through headings. Well written and properly ordered headings can save screen reader time and frustration. In addition to making the page more accessible, headings have other benefits since search engines use headings when filtering, ordering, and displaying results. Improving the accessibility of your site can also have the effect of making your page more findable.",
-    "algorithm": "Ensures the order of headings is semantically correct"
+    "algorithm": "Ensures the order of headings is semantically correct",
+    "helpUrl":"https://dequeuniversity.com/rules/axe/4.9/heading-order?application=axe-puppeteer"
   },
   {
     "id": "landmark-unique",
@@ -13,7 +14,8 @@
     "impact": "moderate",
     "description": "Landmarks must have a unique role or role/label/title (i.e. accessible name) combination.",
     "whyItMatters": "landmark-unique is a new best practice rule ensures that landmarks have a unique role or accessible name (i.e. role, label, title) combination.",
-    "algorithm": "Ensures landmarks are unique."
+    "algorithm": "Ensures landmarks are unique.",
+    "helpUrl":"https://dequeuniversity.com/rules/axe/4.9/landmark-unique?application=axe-puppeteer"
   },
   {
     "id": "region",
@@ -21,7 +23,8 @@
     "impact": "moderate",
     "description": "It is best practice to contain all content excepting skip links, within distinct regions such as the header, nav, main, and footer.",
     "whyItMatters": "Navigating a web page is far simpler for screen reader users if the content splits between multiple high-level sections. Content outside of sections is difficult to find, and the content's purpose may be unclear. Historically, HTML lacked some key semantic markers such as the ability to designate sections of the page as the header, navigation, main content, and footer. Using both HTML5 elements and ARIA landmarks in the same element is considered a best practice, but the future favors using native HTML5 element regions as browser support increases.",
-    "algorithm": "Ensures that all content on a page is contained within a landmark region."
+    "algorithm": "Ensures that all content on a page is contained within a landmark region.",
+    "helpUrl":"https://dequeuniversity.com/rules/axe/4.9/region?application=axe-puppeteer"
   },
   {
     "id": "tabindex",
@@ -29,6 +32,7 @@
     "impact": "serious",
     "description": "A tabindex attribute must never have a value greater than 0 to prevent an unexpected tab order that can give the appearance of skipping some elements entirely.",
     "whyItMatters": "Using tabindex with a value greater than 0 can create as many problems as it solves. It creates an unexpected tab order, which makes the page less intuitive and can give the appearance of skipping certain elements entirely.",
-    "algorithm": "Ensures that explicit tabindex attributes that are greater than 0 are never used"
+    "algorithm": "Ensures that explicit tabindex attributes that are greater than 0 are never used",
+    "helpUrl":"https://dequeuniversity.com/rules/axe/4.9/tabindex?application=axe-puppeteer"
   }
 ]

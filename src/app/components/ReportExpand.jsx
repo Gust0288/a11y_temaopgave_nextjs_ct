@@ -32,7 +32,7 @@ function ReportExpand(props) {
       <div className={expanded ? styles.open : styles.closed}>
         <p>{props.description}</p>
         <p>{props.help}</p>
-        <Link href={props.helpUrl} prefetch={false}>
+        <Link href={`/wiki/${props.id}`}>
           Read more here
         </Link>
       </div>
