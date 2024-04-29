@@ -5,10 +5,14 @@
     transform: rotate(90deg);
   } */
 }
-article:has(.open, .closed) svg {
-  transition: all 0.2s ease-out;
+.open{
+  padding: 0.5rem;
 }
+/* article:has(.open, .closed) svg {
+  transition: all 0.2s ease-out;
+} */
 
 article:has(.open) svg {
   rotate: 90deg;
 }
+

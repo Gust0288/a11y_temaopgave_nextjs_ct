@@ -61,7 +61,8 @@ h3 {
 h4 {
   /* font-family: var(--font-poppins); */
   font-size: var(--step-0);
-  color: var(--colors-grey-80);
+  color: var(--colors-grey-10);
+  opacity: 0.7;
 }
 p {
   font-size: var(--step-0);
@@ -69,15 +70,16 @@ p {
 }
 
 nav{
+  background-color: var(--colors-brand-turquoise-00);
   a {
-    font-size: var(--step-2);
-    font-weight: 300;
+    font-size: var(--step-1);
+    font-weight: 400;
     /* background: var(--colors-grey-00);
     color: var(--colors-brand-orange-70); */
     /* color: var(--colors-brand-orange-70); */
     &:hover {
       /* font-weight: 500; */
-      background-color: var(--colors-brand-turquoise-00);
+      /* background-color: var(--colors-brand-turquoise-00); */
       filter: drop-shadow(0 4px 4px var(--colors-brand-turquoise-50));
       
       /* filter: drop-shadow(0 0 2px var(--colors-brand-yellow-40)); */
