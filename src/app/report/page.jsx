@@ -17,6 +17,13 @@ import "../globals.css";
 //   console.log("data", data);
 //   console.log("data", data.violations);
 
+const impactScores = {
+  minor: 1,
+  moderate: 2,
+  severe: 3,
+  serious: 10,
+};
+
 const totalViolations = data.violations.length;
 const totalPasses = data.passes.length;
 
@@ -24,6 +31,15 @@ const totalChecks = totalPasses + totalViolations;
 
 export default function Page() {
   //slet og erstat med working API når færdig med styling/setup
+
+  let totalImpactScore = 0;
+
+  // Calculate total impact score using forEach
+  data.violations.map((violation) => {
+    const impactScore = impactScores[violation.impact] || 0;
+    totalImpactScore += impactScore;
+  });
+
   return (
     <div>
       <div className="grid md:grid-cols-2 mb-12">
@@ -44,6 +60,7 @@ export default function Page() {
           className="border-2 border-slate-800  w-full md:w-1/2 xl:w-[600px]"
         />
       </div>
+      <h1> Total Impact Score: {totalImpactScore}</h1>
       <h2 className="bg-brand-grey-80 text-brand-grey-00 pl-2">
         {totalChecks} relevant points checked
       </h2>
