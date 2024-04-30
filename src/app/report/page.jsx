@@ -34,7 +34,7 @@ export default function Page() {
 
   let totalImpactScore = 0;
 
-  // Calculate total impact score using forEach
+  // Calculate total impact score using map
   data.violations.map((violation) => {
     const impactScore = impactScores[violation.impact] || 0;
     totalImpactScore += impactScore;
