@@ -44,12 +44,20 @@ export default function Page() {
           className="border-2 border-slate-800  w-full md:w-1/2 xl:w-[600px]"
         />
       </div>
-      <h2 className="bg-brand-grey-80 text-brand-grey-00 pl-2">{totalChecks} relevant points checked</h2>
+      <h2 className="bg-brand-grey-80 text-brand-grey-00 pl-2">
+        {totalChecks} relevant points checked
+      </h2>
       {/* skal den vøre fold-out ligesom reportExpand? */}
-      <h3 className="pl-2 text-brand-grey-80">{data.passes.length} points cleared succesfully</h3>
+      <h3 className="pl-2 text-brand-grey-80">
+        {data.passes.length} points cleared succesfully
+      </h3>
       <div className="flex gap-2 mt-10">
-      <h3 className="font-semibold text-brand-grey-100">Found {data.violations.length} issues</h3>
-      <h3 className="px-4 font-semibold text-brand-grey-00 bg-brand-grey-80 rounded-full">!</h3>
+        <h3 className="font-semibold text-brand-grey-100">
+          Found {data.violations.length} issues
+        </h3>
+        <h3 className="px-4 font-semibold text-brand-grey-00 bg-brand-grey-80 rounded-full">
+          !
+        </h3>
       </div>
       {data.violations.map((violation) => (
         <ReportExpand key={violation.id} {...violation} />
