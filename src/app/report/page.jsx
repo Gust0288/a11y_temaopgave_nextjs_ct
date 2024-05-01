@@ -4,6 +4,11 @@ import Image from "next/image";
 import ReportExpand from "../components/ReportExpand";
 import "../globals.css";
 
+export const metadata = {
+  title: "Website Report - a11y checker",
+  description: "Here you see a comprehensive report of a11y on your website",
+};
+
 // //Fetch API virker med raport
 // export const revalidate = 1800;
 

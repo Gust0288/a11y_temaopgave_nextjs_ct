@@ -1,10 +1,21 @@
 import data from "../../../assets/examples/wiki.json";
 import Link from "next/link";
 
+export const metadata = {
+  title: "A11y Wiki",
+  description:
+    "Read up on what the different accessibilities means for your user",
+};
+
 function errorPage({ params }) {
   const filtered = data.filter((d) => d.id === params.slug);
 
   const issue = filtered[0];
+
+  metadata.title = issue ? issue.id : "A11y Wiki";
+  metadata.description = issue
+    ? issue.name
+    : "Read up on what the different accessibilities means for your user";
 
   return (
     <div className="flex flex-col p-2 gap-2">

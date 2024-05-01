@@ -2,6 +2,12 @@ import React from "react";
 import Link from "next/link";
 import data from "../../assets/examples/wiki.json";
 
+export const metadata = {
+  title: "A11y Wiki",
+  description:
+    "Read up on what the different accessibilities means for your user",
+};
+
 function page() {
   return (
     <div>
