@@ -60,6 +60,8 @@ p {
 a {
   font-family: var(--font-poppins);
   font-size: var(--step-0);
+  text-decoration: underline;
+  color: var(--colors-brand-orange-70);
 }
 
 nav {

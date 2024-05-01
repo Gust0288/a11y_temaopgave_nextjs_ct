@@ -36,14 +36,18 @@ function errorPage({ params }) {
           <span className="font-bold">Algorithm:</span> {issue.algorithm}
         </p>
       </div>
-      <Link
-        href={issue.helpUrl}
-        prefetch={false}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        For more information, and further reading, click here.
-      </Link>
+      <p>
+        {" "}
+        For more information, and further reading,{" "}
+        <Link
+          href={issue.helpUrl}
+          prefetch={false}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          click here.
+        </Link>{" "}
+      </p>
     </div>
   );
 }
