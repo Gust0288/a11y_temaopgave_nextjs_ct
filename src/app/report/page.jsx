@@ -12,20 +12,18 @@ export const metadata = {
 };
 
 // //Fetch API virker med raport
-// export const revalidate = 1800;
 
-// export default async function Page({ searchParams }) {
-//   const params = new URLSearchParams(searchParams);
-//   const response = await fetch(
-//     `https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`
-//   );
-//   const data = await response.json();
+export const revalidate = 1800;
 
-//   console.log("data", data);
-//   console.log("data", data.violations);
+export default async function Page({ searchParams }) {
+  const params = new URLSearchParams(searchParams);
+  const response = await fetch(
+    `https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`
+  );
+  const data = await response.json();
 
-export default function Page() {
-  //slet og erstat med working API når færdig med styling/setup
+  console.log("data", data);
+  console.log("data", data.violations);
   const impactScores = {
     minor: 1,
     moderate: 2,
@@ -81,7 +79,7 @@ export default function Page() {
 
         <Image
           // src="./public/exampleImages/kea.webp"
-          src={`/exampleImages/${data.screenshot.url}`} //til rapport hentet med API
+          src={data.screenshot.url} //til rapport hentet med API
           alt="screenshot of searched site"
           width={data.screenshot.width}
           height={data.screenshot.height}
