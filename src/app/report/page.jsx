@@ -63,20 +63,21 @@ export default function Page() {
 
   return (
     <div>
+      <div className="mx-2 mb-10">
+        <p>Report for:</p>
+        <h1 className="bg-brand-grey-80 text-brand-grey-00 text-center truncate rounded-md">
+          {data.url}
+        </h1>
+      </div>
       <div className="flex flex-col sm:flex-col-reverse md:grid md:grid-cols-2 mb-12">
-        <div className="flex flex-col sm:text-center">
-          <div className="mx-2">
-            <p>Report for:</p>
-            <h1 className="bg-brand-grey-80 text-brand-grey-00 text-center truncate">
-              {data.url}
-            </h1>
+        <div className="flex flex-col sm:text-center justify-evenly">
+          <div className="m-auto h-full w-full">
+            <ScoreVisual
+              issues={data.violations.length}
+              passes={data.passes.length}
+            />
           </div>
-          <ScoreVisual
-            issues={data.violations.length}
-            passes={data.passes.length}
-            className="my-auto"
-          />
-          <h4 className="mt-auto">Report filed at: {data.timestamp}</h4>
+          <h4>Report filed at: {data.timestamp}</h4>
         </div>
 
         <Image
@@ -121,11 +122,11 @@ export default function Page() {
           <ReportExpand key={violation.id} {...violation} />
         ))}
       </div>
-      <div className="flex flex-col mt-20">
+      <div className="flex flex-col mt-20 sm:mx-4">
         <h3>List of all relevant checks</h3>
         <div className="mt-6">
           <h4>{totalPasses ? totalPasses : "no"} checks passed</h4>
-          <div className="border-2 border-brand-grey-80 grid grid-cols-3 gap-1 mt-1">
+          <div className="border-2 border-brand-turquoise-50 grid grid-cols-3 gap-1 mt-1 bg-brand-turquoise-00">
             {data.passes.map((passes) => (
               <Link key={passes.id} href={`/wiki/${passes.id}`} className="p-2">
                 {passes.id}
@@ -137,7 +138,7 @@ export default function Page() {
           <h4>
             {totalViolations ? totalViolations : "no"} checks violated a rule
           </h4>
-          <div className="border-2 border-brand-grey-80 grid grid-cols-3 gap-1 mt-1">
+          <div className="border-2 border-brand-turquoise-50 grid grid-cols-3 gap-1 mt-1 bg-brand-turquoise-00">
             {data.violations.map((violations) => (
               <Link
                 key={violations.id}
@@ -162,7 +163,7 @@ export default function Page() {
               !
             </abbr>
           </div>
-          <div className="border-2 border-brand-grey-80 grid grid-cols-3 gap-1 mt-1">
+          <div className="border-2 border-brand-turquoise-50 grid grid-cols-3 gap-1 mt-1 bg-brand-turquoise-00">
             {data.inapplicable.map((inapplicable) => (
               <Link
                 key={inapplicable.id}
