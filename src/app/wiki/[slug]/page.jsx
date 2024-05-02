@@ -18,25 +18,26 @@ function errorPage({ params }) {
     : "Read up on what the different accessibilities means for your user";
 
   return (
-    <div className="flex flex-col p-2 gap-2">
+    <div className="flex flex-col p-2 gap-6">
       <div className="">
         <h1 className="pb-2">{issue.name}</h1>
         <h4 className="-mt-2">User Impact: {issue.impact}</h4>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-6">
         <p>
-          <span className="font-bold">Rule Description: </span>{" "}
+          <span className="font-bold underline">Rule Description: </span>{" "}
           {issue.description}
         </p>
         <p>
-          <span className="font-bold">Why it Matters:</span>{" "}
+          <span className="font-bold underline">Why it Matters:</span>{" "}
           {issue.whyItMatters}
         </p>
         <p>
-          <span className="font-bold">Algorithm:</span> {issue.algorithm}
+          <span className="font-bold underline">Algorithm:</span>{" "}
+          {issue.algorithm}
         </p>
       </div>
-      <p>
+      <p className="font-bold">
         {" "}
         For more information, and further reading,{" "}
         <Link
@@ -44,6 +45,7 @@ function errorPage({ params }) {
           prefetch={false}
           target="_blank"
           rel="noopener noreferrer"
+          className="font-bold"
         >
           click here.
         </Link>{" "}
