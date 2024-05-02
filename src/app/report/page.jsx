@@ -62,7 +62,7 @@ export default function Page() {
   return (
     <div>
       <div className="flex flex-col sm:flex-col-reverse md:grid md:grid-cols-2 mb-12">
-        <div className="flex flex-col">
+        <div className="flex flex-col sm:text-center">
           <div className="mx-2">
             <p>Report for:</p>
             <h1 className="bg-brand-grey-80 text-brand-grey-00 text-center truncate">
