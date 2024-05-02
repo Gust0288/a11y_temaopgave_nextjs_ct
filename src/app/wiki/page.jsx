@@ -14,7 +14,7 @@ function page() {
       <h1>WCAG 2.1 guidelines - Wiki</h1>
       <ul className="mt-2">
         {data.map((issue) => (
-          <li tabIndex="1" className="p-3.5 border-b" key={issue.id}>
+          <li className="p-3.5 border-b" key={issue.id}>
             <Link href={`/wiki/${issue.id}`} prefetch={false}>
               {issue.id}
             </Link>
