@@ -15,7 +15,11 @@ function Header() {
             Home
           </Link>
         </li>
-        <Image src={diversaLogo} alt="Diversa logo" className="w-auto h-20" />
+        <Image
+          src={diversaLogo}
+          alt="Diversa logo"
+          className="w-auto h-16 md:h-20"
+        />
         {/* ^Erstat med diversea logo^ */}
         <li>
           <Link
