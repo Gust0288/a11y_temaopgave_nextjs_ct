@@ -28,7 +28,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${baskerville.variable}`}>
+      <body
+        className={`${poppins.variable} ${baskerville.variable} overflow-scroll`}
+      >
         <Header></Header>
         <main className="max-w-5xl m-auto grid grid-cols-1 my-5">
           {children}
