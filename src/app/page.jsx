@@ -25,7 +25,7 @@ export default function Home() {
             type="submit"
             className="border-2 rounded-md border-brand-turquoise-50 text-brand-orange-70 hover:bg-brand-turquoise-00 font-bold p-2"
           >
-            Submit
+            Check
           </button>
         </fieldset>
       </form>
