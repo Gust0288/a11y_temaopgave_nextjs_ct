@@ -22,8 +22,8 @@ export default async function Page({ searchParams }) {
   );
   const data = await response.json();
 
-  console.log("data", data);
-  console.log("data", data.violations);
+  // console.log("data", data);
+  // console.log("data", data.violations);
   const impactScores = {
     minor: 1,
     moderate: 2,
