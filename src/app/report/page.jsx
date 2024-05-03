@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../../../public/examples/kea_dk";
+//import data from "../../../public/examples/kea_dk";
 import Image from "next/image";
 import ReportExpand from "../components/ReportExpand";
 import "../globals.css";
