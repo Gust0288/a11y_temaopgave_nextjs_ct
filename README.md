@@ -1,8 +1,16 @@
-# a11y test af din hjemmeside
+# A11y Website Test ♿
 
-Hvor brugervenlig er din hjemmeside egentlig?
+**How user-friendly is your website really?**  
 
-Dette Projekt går ud at teste hvorvidt din hjemmeside overholder a11y accessibility reglerne inden for webudvikling.
+This project focuses on testing whether a website complies with **a11y (accessibility) standards** within modern web development.  
+The goal is to evaluate usability, accessibility, and overall compliance with best practices.  
 
-Bygget med **Next.js**
+## Features ✨
+- ✅ **Accessibility Testing** – Check if a website follows a11y guidelines.  
+- 🔍 **Evaluation of Usability** – Identify areas where user experience can be improved.  
+- ⚡ **Built with Next.js** – Modern framework for fast and dynamic rendering.  
 
+## Tech Stack 🛠️
+- **Next.js** – Core framework  
+- **JavaScript (ES6+)** – Logic and interactivity  
+- **HTML & CSS** – Structure and styling  
